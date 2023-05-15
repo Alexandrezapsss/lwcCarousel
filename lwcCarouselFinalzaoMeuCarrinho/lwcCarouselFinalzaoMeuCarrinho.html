@@ -1,0 +1,22 @@
+<template>
+    <div class="baseContainer">
+        <!--Criar uma Div para armazenar o carousel-->
+        <div class="containerCarousel">
+            <!--Vai ser um div por imagem-->
+            <div class="imgCarousel"><!--chamar a imagem aqui dentro pela tag img fazer pelo css é deu ruim-->
+                <img src={imagem1}>
+            </div>
+            <div class="imgCarousel">
+                <img src={imagem2}>
+            </div>
+            <div class="imgCarousel">
+                <img src={imagem3}>
+            </div>
+        </div>
+        <!--Criar uma div para realocar o espaçamento dos botões para não ficar abaixo so banner-->
+        <div class="posicaoBotao"><!--Lembrar que o lwc não reconhece certas expressões html testei e funciona na org-->
+            <button class="botao direita" onclick={imagemAnterior}>&lt;</button>
+            <button class="botao esquerda" onclick={imagemProxima}>&gt;</button>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,53 @@
+/*começo da estrutura do container*/
+.baseContainer{
+    position: relative;
+    width: 100%;
+    overflow: hidden;/*Aqui é para as imagens do carousel não vazem da div*/
+}
+
+.containerCarousel{
+    display: flex;
+    transition: transform 0.5s ease-in-out;/*Tempo de transição das imagens*/
+}
+/*fim da estrutura do container*/
+/*começo das imagens que ficam no carousel*/
+.imgCarousel{
+    flex: 1; /*usar o flex: 1 para os itens dessa classe preencher o espaço da div pai*/
+    min-width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.imgCarousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*vai manter o tamanho da imagem original - anotar parar ver se uso no lugar o cover*/
+  }
+/*fim das imagens no carousel*/
+/*começo de estruturar os botões*/
+.posicaoBotao {
+    position: absolute;
+    top: 50%;/*deixa ele no meio da div*/
+    transform: translateY(-50%);/*sempre uar com o top pois o top é o ponto de partida para posicionar os botões no meu da div vertivalmente*/
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.botao {
+  background-color: #FF9E01;
+  border: none;
+  width: 40px;
+  height: 40px;
+  pointer-events: all;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.botao .direita{
+    background-position: center;
+}
+
+.botao .esquerda{
+  background-position: center;
+}
+/*fim de botões*/
